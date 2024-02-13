@@ -1,5 +1,5 @@
 
-function halfAndTwoInputMultiplication(inputField1, inputField2, put){
+function halfAndTwoInputMultiplication(inputField1, inputField2, put) {
     const baseInput = document.getElementById(inputField1);
     const baseText = baseInput.value;
     const base = parseFloat(baseText);
@@ -14,9 +14,19 @@ function halfAndTwoInputMultiplication(inputField1, inputField2, put){
     const puttingArea = document.getElementById(put);
     puttingArea.innerText = areaCalculation;
 
+    var myVariable = 'Hello';
+    var myText = ' World!';
+    var newText = document.createTextNode(myVariable + myText);
+
+
+    const AreaResult = areaCalculation;
+    const AreaText = 'This Area is: '
+    const result = document.createElement('p');
+    result.innerText = AreaText+AreaResult;
+    document.getElementById('resut-add-here').appendChild(result);
 }
 
-function twoInputMultiplication(inputField1, inputField2, put){
+function twoInputMultiplication(inputField1, inputField2, put) {
     const baseInput = document.getElementById(inputField1);
     const baseText = baseInput.value;
     const base = parseFloat(baseText);
@@ -31,8 +41,14 @@ function twoInputMultiplication(inputField1, inputField2, put){
     const puttingArea = document.getElementById(put);
     puttingArea.innerText = areaCalculation;
 
+    const AreaResult = areaCalculation;
+    const AreaText = 'This Area is: '
+    const result = document.createElement('p');
+    result.innerText = AreaText+AreaResult;
+    document.getElementById('resut-add-here').appendChild(result);
+
 }
-function piAndTwoInputMultiplication(inputField1, inputField2, put){
+function piAndTwoInputMultiplication(inputField1, inputField2, put) {
     const baseInput = document.getElementById(inputField1);
     const baseText = baseInput.value;
     const base = parseFloat(baseText);
@@ -46,5 +62,12 @@ function piAndTwoInputMultiplication(inputField1, inputField2, put){
     const areaCalculation = Math.PI * base * height;
     const puttingArea = document.getElementById(put);
     puttingArea.innerText = areaCalculation.toFixed(3);
+
+
+    const AreaResult = areaCalculation;
+    const AreaText = 'This Area is: '
+    const result = document.createElement('p');
+    result.innerText = AreaText+AreaResult;
+    document.getElementById('resut-add-here').appendChild(result);
 
 }
