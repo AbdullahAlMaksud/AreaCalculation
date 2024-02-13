@@ -1,5 +1,5 @@
 
-function halfAndTwoInputMultiplication(inputField1, inputField2, put) {
+function halfAndTwoInputMultiplication(inputField1, inputField2, put, heading) {
     const baseInput = document.getElementById(inputField1);
     const baseText = baseInput.value;
     const base = parseFloat(baseText);
@@ -20,13 +20,14 @@ function halfAndTwoInputMultiplication(inputField1, inputField2, put) {
 
 
     const AreaResult = areaCalculation;
-    const AreaText = 'This Area is: '
+
+    const AreaText = document.getElementById(heading).innerText;
     const result = document.createElement('p');
-    result.innerText = AreaText+AreaResult;
+    result.innerText = AreaText+"     "+AreaResult;
     document.getElementById('resut-add-here').appendChild(result);
 }
 
-function twoInputMultiplication(inputField1, inputField2, put) {
+function twoInputMultiplication(inputField1, inputField2, put, heading) {
     const baseInput = document.getElementById(inputField1);
     const baseText = baseInput.value;
     const base = parseFloat(baseText);
@@ -42,13 +43,13 @@ function twoInputMultiplication(inputField1, inputField2, put) {
     puttingArea.innerText = areaCalculation;
 
     const AreaResult = areaCalculation;
-    const AreaText = 'This Area is: '
+    const AreaText = document.getElementById(heading).innerText;
     const result = document.createElement('p');
-    result.innerText = AreaText+AreaResult;
+    result.innerText = AreaText+"     "+AreaResult;
     document.getElementById('resut-add-here').appendChild(result);
 
 }
-function piAndTwoInputMultiplication(inputField1, inputField2, put) {
+function piAndTwoInputMultiplication(inputField1, inputField2, put, heading) {
     const baseInput = document.getElementById(inputField1);
     const baseText = baseInput.value;
     const base = parseFloat(baseText);
@@ -65,9 +66,9 @@ function piAndTwoInputMultiplication(inputField1, inputField2, put) {
 
 
     const AreaResult = areaCalculation;
-    const AreaText = 'This Area is: '
+    const AreaText = document.getElementById(heading).innerText;
     const result = document.createElement('p');
-    result.innerText = AreaText+AreaResult;
+    result.innerText = AreaText+"     "+AreaResult;
     document.getElementById('resut-add-here').appendChild(result);
 
 }
