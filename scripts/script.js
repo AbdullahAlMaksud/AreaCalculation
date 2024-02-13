@@ -23,7 +23,8 @@ function halfAndTwoInputMultiplication(inputField1, inputField2, put, heading) {
 
     const AreaText = document.getElementById(heading).innerText;
     const result = document.createElement('p');
-    result.innerText = AreaText+"     "+AreaResult;
+    const centi = document.getElementById('centi').innerText
+    result.innerText = AreaText+"-----"+AreaResult+"-----"+centi;
     document.getElementById('resut-add-here').appendChild(result);
 }
 
@@ -45,7 +46,8 @@ function twoInputMultiplication(inputField1, inputField2, put, heading) {
     const AreaResult = areaCalculation;
     const AreaText = document.getElementById(heading).innerText;
     const result = document.createElement('p');
-    result.innerText = AreaText+"     "+AreaResult;
+    const centi = document.getElementById('centi').innerText;
+    result.innerText = AreaText+"-----"+AreaResult+"-----"+centi;
     document.getElementById('resut-add-here').appendChild(result);
 
 }
@@ -67,8 +69,9 @@ function piAndTwoInputMultiplication(inputField1, inputField2, put, heading) {
 
     const AreaResult = areaCalculation;
     const AreaText = document.getElementById(heading).innerText;
-    const result = document.createElement('p');
-    result.innerText = AreaText+"     "+AreaResult;
+    const result = document.createElement('li');
+    const centi = document.getElementById('centi').innerText;
+    result.innerText = AreaText+"-----"+AreaResult+"-----"+centi;
     document.getElementById('resut-add-here').appendChild(result);
 
 }
