@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry Gem</title>
+    <!-- Daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header
+      class="bg-blue-100 mx-8 px-6 py-4 p flex justify-between rounded-lg items-center"
+    >
+      <div>
+        <h1 class="text-3xl text-gray-700 font-bold">Interactive</h1>
+        <p class="text-md text-gray-700 font-semibold">Geometry Genius</p>
+      </div>
+      <div>
+        <button
+          class="px-6 py-2 bg-blue-500 rounded-md text-lg text-white hover:scale-95"
+        >
+          Blog
+        </button>
+      </div>
+    </header>
+    <main class="m-8">
+      <!-- main Contain Container -->
+      <div class="flex flex-col md:flex-row gap-4">
+        <!-- Shape Card Container -->
+        <div
+          class="flex-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4"
+        >
+          <!-- Triangle Card -->
+          <div
+            class="card bg-base-100 shadow-xl hover:bg-orange-300 border-2 border-gray-100 rounded-md "
+            id="triangle-card"
+          >
+            <figure class="h-72">
+              <img class="" src="./images/triangle.png" alt="Shoes" />
+            </figure>
+            <div class="card-body bg-red-400">
+              <!-- Text -->
+              <h2 class="card-title justify-center">Triangle</h2>
+              <p class="text-center">Area (A) = 0.5 x b x h</p>
+              <!-- InterActive Section: Input -->
+              <div class="mr-4 ml-4 text-center flex gap-6 justify-center">
+                <div>
+                  <input
+                    class="w-16 text-base p-2 rounded-md bg-gray-200"
+                    id="triangle-base"
+                    type="text"
+                    placeholder="Base"
+                  />
+                  <span>cm</span>
+                </div>
+                <div>
+                  <input
+                    class="w-16 text-base p-2 rounded-md bg-gray-200"
+                    id="triangle-height"
+                    type="text"
+                    placeholder="Height"
+                  />
+                  <span>cm</span>
+                </div>
+              </div>
+
+              <!-- InterActive Section: Output -->
+              <div class="text-center">
+                <p class="text-lg font-bold uppercase">
+                  Area: <span id="triangle-area"></span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+              </div>
+
+              <div class="card-actions">
+                <!-- InterActive Section: Button -->
+                <button
+                  class="btn btn-primary w-full"
+                  onclick="getInputById('triangle-base', 'triangle-height', 'triangle-area')"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Rectangle Card -->
+          <div
+            class="card bg-base-100 shadow-xl hover:bg-orange-300 border-2 border-gray-100 rounded-md"
+            id="triangle-card"
+          >
+            <figure class="h-72 bg-red-300">
+              <img class="" src="./images/rectangle.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <!-- Text -->
+              <h2 class="card-title justify-center">Rectangle</h2>
+              <p class="text-center">Area (A) = base x height</p>
+              <!-- InterActive Section: Input -->
+              <div class="mr-4 ml-4 text-center flex gap-6 justify-center">
+                <div>
+                  <input
+                    class="w-16 text-base p-2 rounded-md bg-gray-200"
+                    id="triangle-base"
+                    type="text"
+                    placeholder="Base"
+                  />
+                  <span>cm</span>
+                </div>
+                <div>
+                  <input
+                    class="w-16 text-base p-2 rounded-md bg-gray-200"
+                    id="triangle-height"
+                    type="text"
+                    placeholder="Height"
+                  />
+                  <span>cm</span>
+                </div>
+              </div>
+
+              <!-- InterActive Section: Output -->
+              <div class="text-center">
+                <p class="text-lg font-bold uppercase">
+                  Area: <span id="triangle-area"></span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+              </div>
+
+              <div class="card-actions">
+                <!-- InterActive Section: Button -->
+                <button
+                  class="btn btn-primary w-full"
+                  onclick="calculateTriangleArea()"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Parallelogram Card -->
+          <div
+            class="card bg-base-100 shadow-xl hover:bg-orange-300 border-2 border-gray-100 rounded-md"
+            id="triangle-card"
+          >
+            <figure class="h-72 bg-red-300">
+              <img class="py-8 px-8" src="./images/parallelogram.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <!-- Text -->
+              <h2 class="card-title justify-center">Parallelogram</h2>
+              <p class="text-center">Area (A) = base x height</p>
+              <!-- InterActive Section: Input -->
+              <div class="mr-4 ml-4 text-center flex gap-6 justify-center">
+                <div>
+                  <input
+                    class="w-16 text-base p-2 rounded-md bg-gray-200"
+                    id="triangle-base"
+                    type="text"
+                    placeholder="Base"
+                  />
+                  <span>cm</span>
+                </div>
+                <div>
+                  <input
+                    class="w-16 text-base p-2 rounded-md bg-gray-200"
+                    id="triangle-height"
+                    type="text"
+                    placeholder="Height"
+                  />
+                  <span>cm</span>
+                </div>
+              </div>
+
+              <!-- InterActive Section: Output -->
+              <div class="text-center">
+                <p class="text-lg font-bold uppercase">
+                  Area: <span id="triangle-area"></span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+              </div>
+
+              <div class="card-actions">
+                <!-- InterActive Section: Button -->
+                <button
+                  class="btn btn-primary w-full"
+                  onclick="calculateTriangleArea()"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Rhombus Card -->
+          <div
+            class="card bg-base-100 shadow-xl hover:bg-orange-300 border-2 border-gray-100 rounded-md"
+            id="triangle-card"
+          >
+            <figure class="h-72 bg-red-300">
+              <img src="./images/rhombus.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <!-- Text -->
+              <h2 class="card-title justify-center">Rectangle</h2>
+              <p class="text-center">Area (A) = 0.5 x b x h</p>
+              <!-- InterActive Section: Input -->
+              <div class="mr-4 ml-4 text-center flex gap-6 justify-center">
+                <div>
+                  <input
+                    class="w-16 text-base p-2 rounded-md bg-gray-200"
+                    id="triangle-base"
+                    type="text"
+                    placeholder="Base"
+                  />
+                  <span>cm</span>
+                </div>
+                <div>
+                  <input
+                    class="w-16 text-base p-2 rounded-md bg-gray-200"
+                    id="triangle-height"
+                    type="text"
+                    placeholder="Height"
+                  />
+                  <span>cm</span>
+                </div>
+              </div>
+
+              <!-- InterActive Section: Output -->
+              <div class="text-center">
+                <p class="text-lg font-bold uppercase">
+                  Area: <span id="triangle-area"></span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+              </div>
+
+              <div class="card-actions">
+                <!-- InterActive Section: Button -->
+                <button
+                  class="btn btn-primary w-full"
+                  onclick="calculateTriangleArea()"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Pentagon Card -->
+          <div
+            class="card bg-base-100 shadow-xl hover:bg-orange-300 border-2 border-gray-100 rounded-md"
+            id="triangle-card"
+          >
+            <figure class="h-72 bg-red-300">
+              <img class="pt-8" src="./images/pentagon.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <!-- Text -->
+              <h2 class="card-title justify-center">Rectangle</h2>
+              <p class="text-center">Area (A) = 0.5 x b x h</p>
+              <!-- InterActive Section: Input -->
+              <div class="mr-4 ml-4 text-center flex gap-6 justify-center">
+                <div>
+                  <input
+                    class="w-16 text-base p-2 rounded-md bg-gray-200"
+                    id="triangle-base"
+                    type="text"
+                    placeholder="Base"
+                  />
+                  <span>cm</span>
+                </div>
+                <div>
+                  <input
+                    class="w-16 text-base p-2 rounded-md bg-gray-200"
+                    id="triangle-height"
+                    type="text"
+                    placeholder="Height"
+                  />
+                  <span>cm</span>
+                </div>
+              </div>
+
+              <!-- InterActive Section: Output -->
+              <div class="text-center">
+                <p class="text-lg font-bold uppercase">
+                  Area: <span id="triangle-area"></span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+              </div>
+
+              <div class="card-actions">
+                <!-- InterActive Section: Button -->
+                <button
+                  class="btn btn-primary w-full"
+                  onclick="calculateTriangleArea()"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Ellipse Card -->
+          <div
+            class="card bg-base-100 shadow-xl hover:bg-orange-300 border-2 border-gray-100 rounded-md"
+            id="triangle-card"
+          >
+            <figure class="h-72 bg-red-300">
+              <img class="pt-8" src="./images/ellipse.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <!-- Text -->
+              <h2 class="card-title justify-center">Rectangle</h2>
+              <p class="text-center">Area (A) = 0.5 x b x h</p>
+              <!-- InterActive Section: Input -->
+              <div class="mr-4 ml-4 text-center flex gap-6 justify-center">
+                <div>
+                  <input
+                    class="w-16 text-base p-2 rounded-md bg-gray-200"
+                    id="triangle-base"
+                    type="text"
+                    placeholder="Base"
+                  />
+                  <span>cm</span>
+                </div>
+                <div>
+                  <input
+                    class="w-16 text-base p-2 rounded-md bg-gray-200"
+                    id="triangle-height"
+                    type="text"
+                    placeholder="Height"
+                  />
+                  <span>cm</span>
+                </div>
+              </div>
+
+              <!-- InterActive Section: Output -->
+              <div class="text-center">
+                <p class="text-lg font-bold uppercase">
+                  Area: <span id="triangle-area"></span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+              </div>
+
+              <div class="card-actions">
+                <!-- InterActive Section: Button -->
+                <button
+                  class="btn btn-primary w-full"
+                  onclick="calculateTriangleArea()"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Area Calculation Container-->
+        <div class="w-96 border-2 border-gray-200 rounded-md">
+          <h3 class="text-3xl text-center p-4">Area Calculation</h3>
+        </div>
+      </div>
+    </main>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
