@@ -40,13 +40,13 @@
             class="card bg-base-100 shadow-xl hover:bg-orange-300 border-2 border-gray-100 rounded-md "
             id="triangle-card"
           >
-            <figure class="h-72">
+            <figure class="h-72 bg-slate-100">
               <img class="" src="./images/triangle.png" alt="Shoes" />
             </figure>
-            <div class="card-body bg-red-400">
+            <div class="card-body">
               <!-- Text -->
               <h2 class="card-title justify-center">Triangle</h2>
-              <p class="text-center">Area (A) = 0.5 x b x h</p>
+              <p class="text-center">Area (A) = 0.5 x Base x Height</p>
               <!-- InterActive Section: Input -->
               <div class="mr-4 ml-4 text-center flex gap-6 justify-center">
                 <div>
@@ -81,7 +81,7 @@
                 <!-- InterActive Section: Button -->
                 <button
                   class="btn btn-primary w-full"
-                  onclick="getInputById('triangle-base', 'triangle-height', 'triangle-area')"
+                  onclick="halfAndTwoInputMultiplication('triangle-base', 'triangle-height', 'triangle-area')"
                 >
                   Calculate
                 </button>
@@ -93,28 +93,28 @@
             class="card bg-base-100 shadow-xl hover:bg-orange-300 border-2 border-gray-100 rounded-md"
             id="triangle-card"
           >
-            <figure class="h-72 bg-red-300">
+            <figure class="h-72 bg-slate-100">
               <img class="" src="./images/rectangle.png" alt="Shoes" />
             </figure>
             <div class="card-body">
               <!-- Text -->
               <h2 class="card-title justify-center">Rectangle</h2>
-              <p class="text-center">Area (A) = base x height</p>
+              <p class="text-center">Area (A) = Width x Height</p>
               <!-- InterActive Section: Input -->
               <div class="mr-4 ml-4 text-center flex gap-6 justify-center">
                 <div>
                   <input
                     class="w-16 text-base p-2 rounded-md bg-gray-200"
-                    id="triangle-base"
+                    id="rectangle-width"
                     type="text"
-                    placeholder="Base"
+                    placeholder="Width"
                   />
                   <span>cm</span>
                 </div>
                 <div>
                   <input
                     class="w-16 text-base p-2 rounded-md bg-gray-200"
-                    id="triangle-height"
+                    id="rectangle-height"
                     type="text"
                     placeholder="Height"
                   />
@@ -125,7 +125,7 @@
               <!-- InterActive Section: Output -->
               <div class="text-center">
                 <p class="text-lg font-bold uppercase">
-                  Area: <span id="triangle-area"></span>
+                  Area: <span id="rectangle-area"></span>
                   <span>cm<sup>2</sup></span>
                 </p>
               </div>
@@ -134,7 +134,7 @@
                 <!-- InterActive Section: Button -->
                 <button
                   class="btn btn-primary w-full"
-                  onclick="calculateTriangleArea()"
+                  onclick="twoInputMultiplication('rectangle-width', 'rectangle-height', 'rectangle-area')"
                 >
                   Calculate
                 </button>
@@ -143,22 +143,22 @@
           </div>
           <!-- Parallelogram Card -->
           <div
-            class="card bg-base-100 shadow-xl hover:bg-orange-300 border-2 border-gray-100 rounded-md"
+            class="card bg-base-100 shadow-xl hover:bg-blue-300 border-2 border-gray-100 rounded-md"
             id="triangle-card"
           >
-            <figure class="h-72 bg-red-300">
+            <figure class="h-72 bg-slate-100 bg-transparent">
               <img class="py-8 px-8" src="./images/parallelogram.png" alt="Shoes" />
             </figure>
             <div class="card-body">
               <!-- Text -->
               <h2 class="card-title justify-center">Parallelogram</h2>
-              <p class="text-center">Area (A) = base x height</p>
+              <p class="text-center">Area (A) = Base x Height</p>
               <!-- InterActive Section: Input -->
               <div class="mr-4 ml-4 text-center flex gap-6 justify-center">
                 <div>
                   <input
                     class="w-16 text-base p-2 rounded-md bg-gray-200"
-                    id="triangle-base"
+                    id="parallelogram-base"
                     type="text"
                     placeholder="Base"
                   />
@@ -167,7 +167,7 @@
                 <div>
                   <input
                     class="w-16 text-base p-2 rounded-md bg-gray-200"
-                    id="triangle-height"
+                    id="parallelogram-height"
                     type="text"
                     placeholder="Height"
                   />
@@ -178,7 +178,7 @@
               <!-- InterActive Section: Output -->
               <div class="text-center">
                 <p class="text-lg font-bold uppercase">
-                  Area: <span id="triangle-area"></span>
+                  Area: <span id="parallelogram-area"></span>
                   <span>cm<sup>2</sup></span>
                 </p>
               </div>
@@ -187,7 +187,7 @@
                 <!-- InterActive Section: Button -->
                 <button
                   class="btn btn-primary w-full"
-                  onclick="calculateTriangleArea()"
+                  onclick="twoInputMultiplication('parallelogram-base', 'parallelogram-height', 'parallelogram-area')"
                 >
                   Calculate
                 </button>
@@ -196,22 +196,22 @@
           </div>
           <!-- Rhombus Card -->
           <div
-            class="card bg-base-100 shadow-xl hover:bg-orange-300 border-2 border-gray-100 rounded-md"
+            class="card bg-base-100 shadow-xl hover:bg-purple-300 border-2 border-gray-100 rounded-md"
             id="triangle-card"
           >
-            <figure class="h-72 bg-red-300">
+            <figure class="h-72">
               <img src="./images/rhombus.png" alt="Shoes" />
             </figure>
             <div class="card-body">
               <!-- Text -->
-              <h2 class="card-title justify-center">Rectangle</h2>
-              <p class="text-center">Area (A) = 0.5 x b x h</p>
+              <h2 class="card-title justify-center">Rhombus</h2>
+              <p class="text-center">Area (A) = 0.5 x Diagonal<sub>1</sub> x Diagonal<sub>2</sub></p>
               <!-- InterActive Section: Input -->
               <div class="mr-4 ml-4 text-center flex gap-6 justify-center">
                 <div>
                   <input
                     class="w-16 text-base p-2 rounded-md bg-gray-200"
-                    id="triangle-base"
+                    id="rhombus-d1"
                     type="text"
                     placeholder="Base"
                   />
@@ -220,7 +220,7 @@
                 <div>
                   <input
                     class="w-16 text-base p-2 rounded-md bg-gray-200"
-                    id="triangle-height"
+                    id="rhombus-d2"
                     type="text"
                     placeholder="Height"
                   />
@@ -231,7 +231,7 @@
               <!-- InterActive Section: Output -->
               <div class="text-center">
                 <p class="text-lg font-bold uppercase">
-                  Area: <span id="triangle-area"></span>
+                  Area: <span id="rhombus-area"></span>
                   <span>cm<sup>2</sup></span>
                 </p>
               </div>
@@ -240,7 +240,7 @@
                 <!-- InterActive Section: Button -->
                 <button
                   class="btn btn-primary w-full"
-                  onclick="calculateTriangleArea()"
+                  onclick="halfAndTwoInputMultiplication('rhombus-d1', 'rhombus-d2', 'rhombus-area')"
                 >
                   Calculate
                 </button>

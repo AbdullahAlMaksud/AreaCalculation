@@ -3,12 +3,12 @@ function halfAndTwoInputMultiplication(inputField1, inputField2, put){
     const baseInput = document.getElementById(inputField1);
     const baseText = baseInput.value;
     const base = parseFloat(baseText);
-    console.log(base)
+    // console.log(base)
 
     const heightInput = document.getElementById(inputField2);
     const heightText = heightInput.value;
     const height = parseFloat(heightText);
-    console.log(height);
+    // console.log(height);
 
     const areaCalculation = 0.5 * base * height;
     const puttingArea = document.getElementById(put);
@@ -16,7 +16,7 @@ function halfAndTwoInputMultiplication(inputField1, inputField2, put){
 
 }
 
-function piAndTwoInputMultiplication(inputField1, inputField2, put){
+function twoInputMultiplication(inputField1, inputField2, put){
     const baseInput = document.getElementById(inputField1);
     const baseText = baseInput.value;
     const base = parseFloat(baseText);
