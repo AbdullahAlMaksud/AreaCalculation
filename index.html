@@ -34,14 +34,14 @@
         <!-- Shape Card Container -->
         <p id="centi" class="hidden">cm<sup>2</sup></p>
         <div
-          class="flex-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4"
+          class="card-container flex-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4"
         >
           <!-- Triangle Card -->
           <div
             class="card bg-base-100 shadow-xl hover:bg-orange-300 border-2 border-gray-100 rounded-md"
             id="triangle-card"
           >
-            <figure class="h-72 bg-slate-100">
+            <figure class="h-72 bg-slate-10 bg-transparent0">
               <img class="" src="./images/triangle.png" alt="Shoes" />
             </figure>
             <div class="card-body">
@@ -82,7 +82,7 @@
                 <!-- InterActive Section: Button -->
                 <button
                   class="btn btn-primary w-full"
-                  onclick="halfAndTwoInputMultiplication('triangle-base', 'triangle-height', 'triangle-area','triangle')"
+                 
                 >
                   Calculate
                 </button>
@@ -94,7 +94,7 @@
             class="card bg-base-100 shadow-xl hover:bg-lime-300 border-2 border-gray-100 rounded-md"
             id="triangle-card"
           >
-            <figure class="h-72 bg-slate-100">
+            <figure class="h-72 bg-slate-10 bg-transparent0">
               <img class="" src="./images/rectangle.png" alt="Shoes" />
             </figure>
             <div class="card-body">
@@ -137,7 +137,6 @@
                 <!-- InterActive Section: Button -->
                 <button
                   class="btn btn-primary w-full"
-                  onclick="twoInputMultiplication('rectangle-width', 'rectangle-height', 'rectangle-area', 'rectangle')"
                 >
                   Calculate
                 </button>
@@ -149,7 +148,7 @@
             class="card bg-base-100 shadow-xl hover:bg-blue-300 border-2 border-gray-100 rounded-md"
             id="triangle-card"
           >
-            <figure class="h-72 bg-slate-100">
+            <figure class="h-72 bg-slate-10 bg-transparent0">
               <img
                 class="py-8 px-8"
                 src="./images/parallelogram.png"
@@ -196,7 +195,7 @@
                 <!-- InterActive Section: Button -->
                 <button
                   class="btn btn-primary w-full"
-                  onclick="twoInputMultiplication('parallelogram-base', 'parallelogram-height', 'parallelogram-area', 'parallelogram')"
+                  
                 >
                   Calculate
                 </button>
@@ -208,7 +207,7 @@
             class="card bg-base-100 shadow-xl hover:bg-purple-300 border-2 border-gray-100 rounded-md"
             id="triangle-card"
           >
-            <figure class="h-72 bg-slate-100">
+            <figure class="h-72 bg-slate-10 bg-transparent">
               <img src="./images/rhombus.png" alt="Shoes" />
             </figure>
             <div class="card-body">
@@ -252,7 +251,7 @@
                 <!-- InterActive Section: Button -->
                 <button
                   class="btn btn-primary w-full"
-                  onclick="halfAndTwoInputMultiplication('rhombus-d1', 'rhombus-d2', 'rhombus-area', 'rhombus')"
+                  
                 >
                   Calculate
                 </button>
@@ -264,7 +263,7 @@
             class="card bg-base-100 shadow-xl hover:bg-green-300 border-2 border-gray-100 rounded-md"
             id="triangle-card"
           >
-            <figure class="h-72 bg-slate-100">
+            <figure class="h-72 bg-slate-10 bg-transparent0">
               <img class="pt-8" src="./images/pentagon.png" alt="Shoes" />
             </figure>
             <div class="card-body">
@@ -307,7 +306,7 @@
                 <!-- InterActive Section: Button -->
                 <button
                   class="btn btn-primary w-full"
-                  onclick="halfAndTwoInputMultiplication('pentagon-apothem', 'pentagon-perimeter', 'pentagon-area', 'pentagon')"
+                 
                 >
                   Calculate
                 </button>
@@ -319,7 +318,7 @@
             class="card bg-base-100 shadow-xl hover:bg-yellow-300 border-2 border-gray-100 rounded-md"
             id="triangle-card"
           >
-            <figure class="h-72 bg-slate-100">
+            <figure class="h-72 bg-slate-10 bg-transparent0">
               <img class="pt-8" src="./images/ellipse.png" alt="Shoes" />
             </figure>
             <div class="card-body">
@@ -362,7 +361,7 @@
                 <!-- InterActive Section: Button -->
                 <button
                   class="btn btn-primary w-full"
-                  onclick="piAndTwoInputMultiplication('ellipse-mejor-axis', 'ellipse-minor-axis', 'ellipse-area', 'ellipse')"
+                 
                 >
                   Calculate
                 </button>
@@ -371,10 +370,12 @@
           </div>
         </div>
         <!-- Area Calculation Container-->
-        <div class="lg:w-96 border-2 border-gray-200 rounded-md">
-          <h3 class="text-3xl text-center p-4">Area Calculation</h3>
+        <div class="lg:w-2/6 border-2 border-gray-200 rounded-md">
+          <h3 class="text-2xl lg:text-3xl text-center p-6 font-semibold decoration-wavy underline">Area Calculation</h3>
           <div>
-            <ol id="resut-add-here" class="p-10 text-sm"></ol>
+            <ol id="result-add-here" class="p-10 text-sm">
+              
+            </ol>
           </div>
         </div>
       </div>
